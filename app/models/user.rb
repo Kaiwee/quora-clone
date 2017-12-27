@@ -8,5 +8,4 @@ class User < ActiveRecord::Base
 
 	validates :username, presence: true, uniqueness: true
 	validates :email, presence: true, uniqueness: true, format: { with: /\w+@\w+\.\w{2,}/, message: 'must be valid email' }
-	validates :password, length: { in: 6..72 }
 end
