@@ -1,0 +1,26 @@
+
+<h>Welcome to Quora!</h>
+
+<a href="/profile">Go to Profile</a>
+
+
+<a href="/questions/new">Add Question</a>
+
+<form method="post" action="/logout">
+	<input type=submit value="Log Out">
+</form>
+
+
+<% @questions.each do |question|%>
+<p>><a href="/questions/<%= question.id %>">Title: <%= question.title %></a></p>
+<p>Description: <%= question.description %></p>
+<% end%>
+
+
+
+<ul>
+	<% @users.each do |user|%>
+	<li><a href="/users/<%= user.id %>"> <%= user.username %></a>
+	</li>
+	<% end%>
+</ul>

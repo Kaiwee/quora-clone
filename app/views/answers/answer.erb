@@ -1,0 +1,6 @@
+<a href="/home">Main Page</a>
+
+
+<% @answers.each do |answer|%>
+	<p><a href="/questions/<%= answer.question_id %>"><%= answer.description %></a></p>
+<% end%>

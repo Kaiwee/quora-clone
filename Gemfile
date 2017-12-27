@@ -24,10 +24,15 @@ gem 'rake'
 # Adding rspec for running unit testing
 gem 'rspec'
 
+# Adding Will Paginate for pagination index
+gem 'will_paginate', '~> 3.0.6'
+
 group :development, :test do
 	# Adding shotgun for local web hosting
 	gem 'shotgun'
 end
+
+gem 'bcrypt'
 
 group :production do
 	# Heroku

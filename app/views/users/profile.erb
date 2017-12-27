@@ -1,0 +1,16 @@
+
+
+<a href="/home">Main Page</a>
+
+
+<h1><%= @user.username %>'s Homepage</h1>
+
+<a href="/users/<%= @user.id %>/questions">My Questions</a>
+
+<a href="/users/<%= @user.id %>/answers">My Answers</a>
+
+<a href="/questions/new">Add Question</a>
+
+<form method="post" action="/logout">
+	<input type=submit value="Log Out">
+</form>

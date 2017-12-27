@@ -1,0 +1,24 @@
+<a href="/home">Main Page</a>
+
+<h1>Title: <%= @question.title %></h1>
+<h1>Description: <%= @question.description %></h1>
+
+
+<h2>Answer</h2>
+<% @answers_list.each do |answer|%>
+  <p><%= answer.description %></p>
+  <p><% if logged_in? and answer.user_id == current_user.id %>
+		<a href="/answers/<%= answer.id %>/edit">Edit</a>
+		<form action="/answers/<%= answer.id %>/destroy" method="post">
+		<input type="submit" value="Delete">
+		</form>
+	<% end %>
+	</p>
+<% end %>
+
+	<p>
+		<form action="/questions/<%= @question.id %>/answers" method="post">
+		<input type=text placeholder="Enter your answer" name="answer[description]"><br>
+		<input type="submit" value="Answer">
+		</form>
+	</p>

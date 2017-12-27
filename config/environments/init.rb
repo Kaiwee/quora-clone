@@ -1,5 +1,6 @@
 # Specify gemfile Location and general variables
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+ENV["OBJC_DISABLE_INITIALIZE_FORK_SAFETY"] = "YES"
 
 # Perform requiring gem that we need
 ######################################################################

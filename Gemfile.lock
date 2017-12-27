@@ -14,6 +14,7 @@ GEM
       tzinfo (~> 1.1)
     arel (8.0.0)
     backports (3.8.0)
+    bcrypt (3.1.11)
     concurrent-ruby (1.0.5)
     daemons (1.2.4)
     diff-lcs (1.3)
@@ -71,6 +72,7 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+    will_paginate (3.0.12)
 
 PLATFORMS
   ruby
@@ -78,6 +80,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
+  bcrypt
   pg
   puma
   rails_12factor
@@ -88,6 +91,7 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-contrib
   thin
+  will_paginate (~> 3.0.6)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0
